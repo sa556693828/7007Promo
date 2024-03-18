@@ -8,10 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        white: "#FFFEE5",
+      },
+      height: {
+        fullPage: "calc(100vh - 80px)",
+      },
+      fontSize: {
+        title: "5vw",
       },
     },
   },
