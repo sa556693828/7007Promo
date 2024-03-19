@@ -15,10 +15,10 @@ export default function Tokenomics() {
     { "Contract Address": "" },
   ];
   return (
-    <div className="h-full w-5/6 flex flex-col items-center gap-14 justify-center pb-[200px]">
-      <a className="text-title w-full">{title}</a>
+    <div className="flex h-full w-5/6 flex-col items-center justify-center gap-14 pb-[200px]">
+      <a className="text-titleM w-full lg:text-title">{title}</a>
 
-      <div className="w-full justify-center h-fit flex gap-12 items-center">
+      <div className="flex h-fit w-full items-center justify-center gap-12">
         <div className="h-fit space-y-5 text-lg">
           {info.map((item, index) => {
             return (
@@ -28,7 +28,7 @@ export default function Tokenomics() {
             );
           })}
         </div>
-        <div className="circleDashed w-[30vw] h-[30vw] text-2xl rounded-full flex justify-center items-center">
+        <div className="circleDashed flex h-[30vw] w-[30vw] items-center justify-center rounded-full text-center text-2xl">
           community owned
         </div>
       </div>

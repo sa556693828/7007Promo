@@ -13,21 +13,21 @@ export default function Asset() {
     `TOOT is the protocol asset of ERC-7007.`,
   ];
   return (
-    <div className="h-full w-5/6 flex flex-col items-center gap-14 justify-center pb-[200px]">
-      <a className="text-title">{title}</a>
-      <a className="whitespace-pre-wrap max-w-3xl text-center text-base">
+    <div className="flex h-full w-5/6 flex-col items-center justify-center gap-14 pb-[200px]">
+      <a className="text-titleM lg:text-title">{title}</a>
+      <a className="max-w-3xl whitespace-pre-wrap text-center text-base">
         {detail}
       </a>
-      <div className="flex w-full h-full relative">
-        <div className="w-[33%] flex flex-col text-3xl justify-center gap-4 items-center relative">
+      <div className="relative flex h-full w-full">
+        <div className="relative flex w-[33%] flex-col items-center justify-center gap-4 text-3xl">
           <Image src={logo} width={150} height={150} alt="logo" />
           <a className="pt-6">toot</a>
           <a>{`{erc - 7007}`}</a>
-          <div className="lineV absolute w-[1px] h-full right-0 top-0" />
+          <div className="lineV absolute right-0 top-0 h-full w-[1px]" />
         </div>
-        <div className="w-[67%] flex flex-col text-lg gap-4 items-center relative py-14 px-10">
+        <div className="relative flex w-[67%] flex-col items-center gap-4 px-10 py-14 text-lg">
           <a>{contentFirst}</a>
-          <ul className="flex flex-col gap-4 list-disc pl-4">
+          <ul className="flex list-disc flex-col gap-4 pl-4">
             {content.map((item, index) => {
               return (
                 <li key={index} className="">
@@ -39,10 +39,10 @@ export default function Asset() {
 
           <a>{contentFinal}</a>
         </div>
-        <div className="lineH absolute w-full h-[1px] top-0 left-0" />
-        <div className="lineH absolute w-full h-[1px] bottom-0 left-0" />
-        <div className="lineV absolute w-[1px] h-full left-0 top-0" />
-        <div className="lineV absolute w-[1px] h-full right-0 top-0" />
+        <div className="lineH absolute left-0 top-0 h-[1px] w-full" />
+        <div className="lineH absolute bottom-0 left-0 h-[1px] w-full" />
+        <div className="lineV absolute left-0 top-0 h-full w-[1px]" />
+        <div className="lineV absolute right-0 top-0 h-full w-[1px]" />
       </div>
     </div>
   );

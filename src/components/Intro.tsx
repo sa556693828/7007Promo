@@ -16,23 +16,23 @@ export default function Intro() {
     `TOOT is the protocol asset of ERC-7007.`,
   ];
   return (
-    <div className="h-full w-5/6 flex flex-col items-center gap-14 justify-center pb-[200px]">
-      <a className="text-[4vw]">{title}</a>
-      <a className="whitespace-pre-wrap max-w-3xl text-center text-base">
+    <div className="flex h-full w-5/6 flex-col items-center justify-center gap-14 pb-[200px]">
+      <a className="text-[8vw] lg:text-[4vw]">{title}</a>
+      <a className="max-w-3xl whitespace-pre-wrap text-center text-base">
         {detail}
       </a>
-      <div className="w-full justify-center flex">
+      <div className="flex w-full flex-col items-center justify-center gap-10 lg:flex-row lg:gap-0">
         <Table />
-        <div className="flex flex-col w-2/5 relative items-center justify-center gap-10">
-          <div className="borderButton w-[200px] h-[70px] flex justify-center items-center">
+        <div className="relative flex w-2/5 flex-col items-center justify-center gap-10">
+          <div className="borderButton flex h-[70px] w-[200px] items-center justify-center">
             erc-404
           </div>
           <GoPlus size={35} />
-          <div className="borderButton w-[200px] h-[70px] flex justify-center items-center">
+          <div className="borderButton flex h-[70px] w-[200px] items-center justify-center">
             erc-7007
           </div>
           <FaEquals className="rotate-90" size={25} />
-          <div className="borderButton w-[200px] h-[70px] flex justify-center items-center">
+          <div className="borderButton flex h-[70px] w-[200px] items-center justify-center">
             toot
           </div>
         </div>

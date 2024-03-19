@@ -16,6 +16,7 @@ const config: Config = {
       },
       fontSize: {
         title: "5vw",
+        titleM: "9vw",
       },
     },
   },

@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import bg from "@/assets/Toot.png";
+import bg from "@/assets/TOOTBG.svg";
 import Image from "next/image";
 
 export default function BaseLayout({
@@ -17,11 +17,11 @@ export default function BaseLayout({
   return (
     <div className="relative">
       <Image
-        src={bg.src}
+        src={bg}
         width={1920}
-        height={1080}
+        height={1280}
         alt="bg"
-        className="absolute top-0 -z-10 h-full"
+        className="absolute top-0 -z-10 h-full left-0 w-full object-cover"
       />
       <Header urlPath={urlPath} />
       <main

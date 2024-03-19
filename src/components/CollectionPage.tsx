@@ -9,28 +9,28 @@ export default function CollectionPage() {
     { title: "legendary toot", content: "112" },
   ];
   return (
-    <div className="h-full w-full flex flex-col items-center pt-12">
-      <a className="text-[4vw]">toot</a>
+    <div className="flex h-full w-full flex-col items-center pt-12">
+      <a className="text-[8vw] lg:text-[4vw]">toot</a>
       <div className="flex justify-center gap-12 pt-10">
         {dataArr.map((data, index) => (
           <div
-            className="flex flex-col items-center justify-end text-center gap-4 w-[20vw]"
+            className="flex w-[20vw] flex-col items-center justify-end gap-4 text-center"
             key={index}
           >
             <a className="text-xl">{data.title}</a>
-            <div className="buttonDashed w-[15vw] h-[65px] flex justify-center text-lg items-center">
+            <div className="buttonDashed flex h-[65px] w-[15vw] items-center justify-center text-lg">
               {data.content}
             </div>
           </div>
         ))}
       </div>
-      <div className="flex justify-start flex-col items-start gap-8 w-5/6 pt-[130px]">
+      <div className="flex w-5/6 flex-col items-start justify-start gap-8 pt-[130px]">
         <a className="text-[2vw]">my collection</a>
-        <div className="w-full h-full grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+        <div className="grid h-full w-full grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           <CollectCard />
         </div>
       </div>
-      <div className="w-full flex justify-center gap-20 py-20">
+      <div className="flex w-full justify-center gap-20 py-20">
         <a className="cursor-pointer hover:opacity-80">previous</a>
         <a className="cursor-pointer hover:opacity-80">next</a>
       </div>
