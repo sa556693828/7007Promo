@@ -25,22 +25,33 @@ export default function Desktop({ urlPath, openLink, headerArr }: Props) {
   return (
     <>
       <div className="z-50 hidden h-[80px] items-center justify-between px-10 lg:flex">
-        <Image src={logo} width={36} height={36} alt="TOOT" />
+        <Image
+          src={logo}
+          width={36}
+          height={36}
+          alt="TOOT"
+          className="cursor-pointer"
+          onClick={() => router.push("/")}
+        />
         <div className="flex">
           {headerArr.map((item: any, index: number) => {
             return (
               <div
                 key={index}
-                className="flex items-center justify-center h-full px-6 cursor-pointer text-base"
+                className="flex items-center justify-center h-full px-6 cursor-pointer text-base hover:opacity-80"
                 onMouseEnter={() => setHoverTG(true)}
                 onMouseLeave={() => setHoverTG(false)}
-                onClick={() => router.push(item.link)}
+                onClick={
+                  item.path !== ""
+                    ? () => router.push(item.path)
+                    : () => openLink(item.link)
+                }
               >
                 {item.name}
               </div>
             );
           })}
-          <FaXTwitter size={24} />
+          <FaXTwitter size={24} className="cursor-pointer hover:opacity-80" />
         </div>
       </div>
     </>

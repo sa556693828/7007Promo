@@ -22,6 +22,10 @@ export default function Circle({ title, size, detail, bottom }: Props) {
     </div>
   );
 }
+//h-32 w-32
+//h-44 w-44
+//h-56 w-56
+//h-64 w-64
 //-bottom-32
 //-bottom-24
 //-bottom-[72px]

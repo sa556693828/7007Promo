@@ -7,13 +7,13 @@ import Tokenomics from "@/components/Tokenomics";
 
 export default function Home() {
   return (
-    <main className="flex h-full flex-col items-center">
+    <div className="flex h-full flex-col items-center">
       <HomePage />
       <Asset />
       <Intro />
       <Roadmap />
       <Mechanism />
       <Tokenomics />
-    </main>
+    </div>
   );
 }

@@ -11,7 +11,7 @@ export default function Footer({ urlPath }: Props) {
     window.open(link, "_blank");
   };
   return (
-    <footer className="flex w-full">
+    <footer className="flex w-full justify-center">
       <Desktop />
       <Mobile />
     </footer>

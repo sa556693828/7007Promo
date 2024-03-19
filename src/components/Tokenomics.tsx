@@ -18,20 +18,18 @@ export default function Tokenomics() {
     <div className="h-full w-5/6 flex flex-col items-center gap-14 justify-center pb-[200px]">
       <a className="text-title w-full">{title}</a>
 
-      <div className="w-full justify-center flex">
-        <Table />
-        <div className="flex flex-col w-2/5 relative items-center justify-center gap-10">
-          <div className="borderButton w-[200px] h-[70px] flex justify-center items-center">
-            erc-404
-          </div>
-          <GoPlus size={35} />
-          <div className="borderButton w-[200px] h-[70px] flex justify-center items-center">
-            erc-7007
-          </div>
-          <FaEquals className="rotate-90" size={25} />
-          <div className="borderButton w-[200px] h-[70px] flex justify-center items-center">
-            toot
-          </div>
+      <div className="w-full justify-center h-fit flex gap-12 items-center">
+        <div className="h-fit space-y-5 text-lg">
+          {info.map((item, index) => {
+            return (
+              <div key={index} className="flex w-full gap-10">
+                {Object.keys(item)[0]}: {Object.values(item)[0]}
+              </div>
+            );
+          })}
+        </div>
+        <div className="circleDashed w-[30vw] h-[30vw] text-2xl rounded-full flex justify-center items-center">
+          community owned
         </div>
       </div>
     </div>

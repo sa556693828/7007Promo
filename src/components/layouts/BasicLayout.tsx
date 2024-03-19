@@ -1,7 +1,9 @@
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import bg from "@/assets/Toot.png";
+import Image from "next/image";
 
 export default function BaseLayout({
   children,
@@ -13,7 +15,14 @@ export default function BaseLayout({
   const router = useRouter();
 
   return (
-    <>
+    <div className="relative">
+      <Image
+        src={bg.src}
+        width={1920}
+        height={1080}
+        alt="bg"
+        className="absolute top-0 -z-10 h-full"
+      />
       <Header urlPath={urlPath} />
       <main
         className="max-w-[100vw]"
@@ -23,7 +32,7 @@ export default function BaseLayout({
       >
         {children}
       </main>
-      {/* <Footer urlPath={urlPath} /> */}
-    </>
+      <Footer urlPath={urlPath} />
+    </div>
   );
 }
