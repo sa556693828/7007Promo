@@ -12,8 +12,11 @@ export default function CollectionPage() {
     <div className="h-full w-full flex flex-col items-center">
       <a className="text-[4vw]">toot</a>
       <div className="flex justify-center gap-12 pt-10">
-        {dataArr.map((data) => (
-          <div className="flex flex-col items-center justify-end text-center gap-4 w-[20vw]">
+        {dataArr.map((data, index) => (
+          <div
+            className="flex flex-col items-center justify-end text-center gap-4 w-[20vw]"
+            key={index}
+          >
             <a className="text-xl">{data.title}</a>
             <div className="buttonDashed w-[15vw] h-[65px] flex justify-center text-lg items-center">
               {data.content}
