@@ -9,7 +9,7 @@ export default function CollectionPage() {
     { title: "legendary toot", content: "112" },
   ];
   return (
-    <div className="h-full w-full flex flex-col items-center">
+    <div className="h-full w-full flex flex-col items-center pt-12">
       <a className="text-[4vw]">toot</a>
       <div className="flex justify-center gap-12 pt-10">
         {dataArr.map((data, index) => (
